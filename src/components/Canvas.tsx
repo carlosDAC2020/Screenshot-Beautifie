@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Upload, Maximize2, Terminal } from "lucide-react";
 // Import Prism core and languages in correct dependency order
 import Prism from "prismjs";
@@ -135,7 +135,7 @@ export default function Canvas({
     /**
      * Recursive mapper: Converts Prism tokens to styled JSX spans
      */
-    const renderPrismTokens = (tokens: (string | Prism.Token)[]): (string | JSX.Element)[] => {
+    const renderPrismTokens = (tokens: (string | Prism.Token)[]): (string | React.JSX.Element)[] => {
         return tokens.map((token, i) => {
             if (typeof token === "string") {
                 return token;
