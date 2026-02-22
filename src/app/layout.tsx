@@ -21,15 +21,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body
-        className={`${inter.variable} font-sans antialiased bg-[#09090b] text-[#fafafa] min-h-screen flex flex-col`}
-      >
+      <head>
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6986304369066538"
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
+      </head>
+      <body
+        className={`${inter.variable} font-sans antialiased bg-[#09090b] text-[#fafafa] min-h-screen flex flex-col`}
+      >
+
         {children}
       </body>
     </html>
